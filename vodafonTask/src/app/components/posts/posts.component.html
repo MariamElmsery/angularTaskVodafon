@@ -1,0 +1,54 @@
+<ng-container *ngFor="let post of userPosts">
+  <div class="container m-2 p-3 card mx-auto" *ngIf="!loading">
+    <div class="d-flex align-items-center pb-3">
+      <img
+        class="rounded-circle shadow-4-strong"
+        [ngStyle]="{ 'max-width': '45px' }"
+        alt="avatar2"
+        src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
+      />
+
+      <h5 class="card-title px-2">{{ user?.username }}</h5>
+    </div>
+    <div>
+      <div
+        class="card border-0 d-flex justify-content-center align-items-center bg-black"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1509390167458-99248fb59fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9zdHN8ZW58MHx8MHx8fDA%3D"
+          class="card-img-top opacity-25 position-relative"
+          alt="postImage"
+          style="height: 20rem"
+        />
+
+        <div
+          class="w-25 h-75 bg-black opacity-10 position-absolute rounded-start-circle rounded-top-pill"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1509390167458-99248fb59fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9zdHN8ZW58MHx8MHx8fDA%3D"
+            class="w-100 h-100 object-fit-cover rounded-start-circle rounded-top-pill"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="card-body position-absolute text-light" style="bottom: 5%">
+        <h5 class="card-title">{{ post.title | truncate : 20 }}</h5>
+        <p class="card-text">
+          {{ post.body | truncate : 50 }}
+        </p>
+        <a
+          class="text-white"
+          [routerLink]="['/user', user.id, 'details', post.id]"
+          routerLinkActive="router-link-active"
+          ><i class="fa-solid fa-comments"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<div *ngIf="loading">
+  <app-post-skeleton></app-post-skeleton>
+  <app-post-skeleton></app-post-skeleton>
+  <app-post-skeleton></app-post-skeleton>
+</div>

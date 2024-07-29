@@ -1,0 +1,11 @@
+.custom-navbar {
+    .navbar-brand,
+    .nav-link {
+        color: #afadad !important; 
+        &:hover {
+          color: #f8f9fa !important; 
+        
+      }
+    }
+  }
+  

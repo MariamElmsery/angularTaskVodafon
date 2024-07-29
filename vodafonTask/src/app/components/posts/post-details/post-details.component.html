@@ -1,0 +1,24 @@
+<ng-container *ngFor="let comment of comments">
+  <div class="container py-3 card my-2" *ngIf="!loading">
+    <div class="d-flex align-items-center">
+      <img
+        class="rounded-circle shadow-4-strong object-fit-cover"
+        [ngStyle]="{ 'max-width': '45px' }"
+        alt="avatar2"
+        [src]="randomImage"
+      />
+
+      <h5 class="card-title px-2">{{ comment?.email }}</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text px-2">{{ comment?.body }}</p>
+    </div>
+  </div>
+</ng-container>
+
+<div *ngIf="loading">
+  <app-comments-skeleton></app-comments-skeleton>
+  <app-comments-skeleton></app-comments-skeleton>
+  <app-comments-skeleton></app-comments-skeleton>
+  <app-comments-skeleton></app-comments-skeleton>
+</div>
