@@ -2,7 +2,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=6000&pause=1000&color=af7152&multiline=true&width=1300&lines=Angular+Blog+Website+showcasing+users,+posts,+and+comments)](https://git.io/typing-svg)
 
-
+- [Live Demo](https://angular-task-vodafon-td7r.vercel.app)
 
 ## 🔗 Screenshots
 
