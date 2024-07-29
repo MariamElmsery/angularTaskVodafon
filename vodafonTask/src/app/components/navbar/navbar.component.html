@@ -23,7 +23,7 @@
               class="border border-2 rounded-circle m-2"
               style="cursor: pointer"
               [ngClass]="{
-                ' border-success-subtle': isActive(user.id),
+                ' border-success': isActive(user.id),
                 'border-danger-subtle': !isActive(user.id)
               }"
               [ngStyle]="{ 'max-width': '65px' }"
